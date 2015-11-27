@@ -106,9 +106,8 @@ namespace ManejoBD
         }
 
 
-        public bool Actualizar(string Tabla, string Campo, string Dato, string CampoBase, string Dato2)
+        public void Actualizar(string Tabla, string Campo, int Dato, string CampoBase, string Dato2)
         {
-            bool Actualizado = false;
             SqlConnection conn = new SqlConnection("Data Source=LOCALHOST;Initial Catalog=HotSoftServidor;Integrated Security=SSPI");
             SqlCommand Comando = new SqlCommand();
             Comando.CommandText = "Update " + Tabla + " set " + Campo + " =@dato where " + CampoBase + "=@desc";
@@ -116,14 +115,21 @@ namespace ManejoBD
             Comando.Parameters.Add("@desc", SqlDbType.VarChar).Value = Dato2;
             Comando.Connection = conn;
             conn.Open();
-
-            if (Comando.ExecuteNonQuery() == 1)
-                Actualizado = true;
-
+            Comando.ExecuteNonQuery();
             conn.Close();
             conn.Dispose();
-
-            return Actualizado;
+        }
+        public void Actualizar(string Tabla, string Campo, string Dato)
+        {
+            SqlConnection conn = new SqlConnection("Data Source=LOCALHOST;Initial Catalog=HotSoftServidor;Integrated Security=SSPI");
+            SqlCommand Comando = new SqlCommand();
+            Comando.CommandText = "Update " + Tabla + " set " + Campo + " =@dato";
+            Comando.Parameters.Add("@dato", SqlDbType.VarChar).Value = Dato;
+            Comando.Connection = conn;
+            conn.Open();
+            Comando.ExecuteScalar();
+            conn.Close();
+            conn.Dispose();
         }
         public int Extracto(int ID, string estracto)
         {

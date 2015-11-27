@@ -9,6 +9,11 @@
  
 
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            margin-left: 60;
+        }
+    </style>
 </head>
 <body>
      <header class="Encabezado">
@@ -32,7 +37,7 @@
                                  <div class="ContSlider">
                                      <h3>Asigne valor para programador Junior</h3>
                                      <input id="RangeJunior" type="range" runat="server" min="1" max="100" oninput="document.getElementById('lblJunior').textContent = this.value;"  />
-                                     <asp:Label ID="lblJunior" runat="server" Text="50" ForeColor="#329040"></asp:Label>
+                                     <asp:Label ID="lblJunior" runat="server" ForeColor="#329040">50</asp:Label>
                                </div>
                              </td>
                         </tr>
@@ -71,20 +76,20 @@
                         <tr>
                             <td>
                                 <div class="Radio">
-                                      <input id="rbLicenciatura" type="radio" name="Estudios" />
+                                      <input id="rbLicenciatura" runat="server" type="radio" name="Estudios" />
                                       <label for="rbLicenciatura">Licenciatura</label>
                                 </div>
                             </td>
                             <td>
                                 <div class="Radio">
-                                      <input id="rbMaestria" type="radio" name="Estudios" />
-                                      <label for="rbMaestria">Licenciatura</label>
+                                      <input id="rbMaestria" runat="server" type="radio" name="Estudios" />
+                                      <label for="rbMaestria">Maestria</label>
                                 </div>
                             </td>
                             <td>
                                 <div class="Radio">
-                                      <input id="rbDoctorado" type="radio" name="Estudios" />
-                                      <label for="rbDoctorado">Licenciatura</label>
+                                      <input id="rbDoctorado" runat="server" type="radio" name="Estudios" />
+                                      <label for="rbDoctorado">Doctorado</label>
                                 </div>
                             </td>
                         </tr>
@@ -94,7 +99,11 @@
                     <asp:Label ID="Label1" runat="server" Text="Carrera afín" Font-Size="14pt"></asp:Label>
                     <br />
 
-                    <asp:TextBox ID="txtAfin" runat="server" CssClass="txt" placeholder="Ingrese carrera afín"></asp:TextBox>
+                    <asp:DropDownList ID="cbAfin" runat="server" CssClass="auto-style1" Height="53px" Width="291px">
+                        <asp:ListItem>Programación general</asp:ListItem>
+                        <asp:ListItem>Programación de redes</asp:ListItem>
+                        <asp:ListItem>Programación electronica</asp:ListItem>
+                    </asp:DropDownList>
                     <br />
                 </div>
             </div>
@@ -111,103 +120,103 @@
                            <table style="width: 93%;">
                                 <tr>
                                     <td class="auto-style4">
-                                          <input id="ch1Cert" type="checkbox" name="ch1Cert" />
+                                          <input id="ch1Cert" runat="server" type="checkbox" name="ch1Cert" />
                                           <label for="ch1Cert">Visual Basic</label>
                                     </td>
                                     <td class="auto-style5">
-                                          <input id="ch2Cert" type="checkbox" name="ch2Cert" />
+                                          <input id="ch2Cert" runat="server" type="checkbox" name="ch2Cert" />
                                           <label for="ch2Cert">C</label>
                                   
                                     </td>
                                     <td>
-                                         <input id="ch3Cert" type="checkbox" name="ch3Cert" />
+                                         <input id="ch3Cert" runat="server" type="checkbox" name="ch3Cert" />
                                          <label for="ch3Cert">C++</label>
                               
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style4">
-                                         <input id="ch4Cert" type="checkbox" name="ch4Cert" />
+                                         <input id="ch4Cert" runat="server" type="checkbox" name="ch4Cert" />
                                          <label for="ch4Cert">Java</label>
                               
                                        
                                     </td>
                                     <td class="auto-style5">
-                                         <input id="ch5Cert" type="checkbox" name="ch5Cert" />
+                                         <input id="ch5Cert" runat="server" type="checkbox" name="ch5Cert" />
                                          <label for="ch5Cert">Python</label>
                                         
                                     </td>
                                     <td>
-                                         <input id="ch6Cert" type="checkbox" name="ch6Cert" />
+                                         <input id="ch6Cert" runat="server" type="checkbox" name="ch6Cert" />
                                          <label for="ch6Cert">Pascal</label>
                                        
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style4">
-                                        <input id="ch7Cert" type="checkbox" name="ch7Cert" />
+                                        <input id="ch7Cert" runat="server" type="checkbox" name="ch7Cert" />
                                          <label for="ch7Cert">C#</label>
                                         
                                     </td>
                                     <td class="auto-style5">
-                                         <input id="ch8Cert" type="checkbox" name="ch8Cert" />
+                                         <input id="ch8Cert" runat="server" type="checkbox" name="ch8Cert" />
                                          <label for="ch8Cert">Ruby</label>
                                         
                                     </td>
                                     <td>
-                                         <input id="ch9Cert" type="checkbox" name="ch9Cert" />
+                                         <input id="ch9Cert" runat="server" type="checkbox" name="ch9Cert" />
                                          <label for="ch9Cert">PHP</label>
                                        
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style4">
-                                         <input id="ch10Cert" type="checkbox" name="ch10Cert" />
+                                         <input id="ch10Cert" runat="server" type="checkbox" name="ch10Cert" />
                                          <label for="ch10Cert">HTML</label>
                                        
                                     </td>
                                     <td class="auto-style5">
-                                         <input id="ch11Cert" type="checkbox" name="ch11Cert" />
+                                         <input id="ch11Cert" runat="server" type="checkbox" name="ch11Cert" />
                                          <label for="ch11Cert">CSS</label>
                                         
                                     </td>
                                     <td>
-                                         <input id="ch12Cert" type="checkbox" name="ch12Cert" />
+                                         <input id="ch12Cert" runat="server" type="checkbox" name="ch12Cert" />
                                          <label for="ch12Cert">JavaScript</label>
                                         
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style4">
-                                          <input id="ch13Cert" type="checkbox" name="ch13Cert" />
+                                          <input id="ch13Cert" runat="server" type="checkbox" name="ch13Cert" />
                                          <label for="ch13Cert">Ensamblador</label>
                                        
                                     </td>
                                     <td class="auto-style5">
-                                        <input id="ch14Cert" type="checkbox" name="ch14Cert" />
+                                        <input id="ch14Cert" runat="server" type="checkbox" name="ch14Cert" />
                                         <label for="ch14Cert">Fortran</label>
                                        
                                        
                                     </td>
                                     <td>
-                                         <input id="ch15Cert" type="checkbox" name="ch15Cert" />
+                                         <input id="ch15Cert" runat="server" type="checkbox" name="ch15Cert" />
                                          <label for="ch15Cert">COBOL</label>
                                         
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style4">
-                                         <input id="ch16Cert" type="checkbox" name="ch16Cert" />
+                                         <input id="ch16Cert" runat="server" type="checkbox" name="ch16Cert" />
                                         <label for="ch16Cert">NesC</label>
                                        
                                     </td>
                                     <td class="auto-style5">
-                                        <input id="ch17Cert" type="checkbox" name="ch17Cert" />
+                                        <input id="ch17Cert" runat="server" type="checkbox" name="ch17Cert" />
                                         <label for="ch17Cert">Prolog</label>
                                        
                                     </td>
                                     <td>
-                                        <input id="ch18Cert" type="checkbox" name="ch18Cert" />
+                                        <input id="ch18Cert" runat="server" type="checkbox" name="ch18Cert" />
                                         <label for="ch18Cert">UML</label>
                                         
                                     </td>
@@ -229,104 +238,104 @@
                               <table style="width: 93%;">
                                 <tr>
                                     <td class="auto-style4">
-                                          <input id="ch1Apt" type="checkbox" name="ch1Apt" />
-                                          <label for="ch1Apt">Visual Basic</label>
+                                          <input id="ch1Apt" runat="server" type="checkbox" name="ch1Apt" />
+                                          <label for="ch1Apt">Trabajo en equipo</label>
                                     </td>
                                     <td class="auto-style5">
-                                          <input id="ch2Apt" type="checkbox" name="ch2Apt" />
-                                          <label for="ch2Apt">C</label>
+                                          <input id="ch2Apt" runat="server" type="checkbox" name="ch2Apt" />
+                                          <label for="ch2Apt">Facilidad de palabra</label>
                                   
                                     </td>
                                     <td>
-                                         <input id="ch3Apt" type="checkbox" name="ch3Apt" />
-                                         <label for="ch3Apt">C++</label>
+                                         <input id="ch3Apt" runat="server" type="checkbox" name="ch3Apt" />
+                                         <label for="ch3Apt">Facilidad de aprendizaje</label>
                               
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style4">
-                                         <input id="ch4Apt" type="checkbox" name="ch4Apt" />
-                                         <label for="ch4Apt">Java</label>
+                                         <input id="ch4Apt" runat="server" type="checkbox" name="ch4Apt" />
+                                         <label for="ch4Apt">Buena comunicación</label>
                               
                                        
                                     </td>
                                     <td class="auto-style5">
-                                         <input id="ch5Apt" type="checkbox" name="ch5Apt" />
-                                         <label for="ch5Apt">Python</label>
+                                         <input id="ch5Apt" runat="server" type="checkbox" name="ch5Apt" />
+                                         <label for="ch5Apt">Puntualidad</label>
                                         
                                     </td>
                                     <td>
-                                         <input id="ch6Apt" type="checkbox" name="ch6Apt" />
-                                         <label for="ch6Apt">Pascal</label>
+                                         <input id="ch6Apt" runat="server" type="checkbox" name="ch6Apt" />
+                                         <label for="ch6Apt">Bueno escuchando</label>
                                        
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style4">
-                                        <input id="ch7Apt" type="checkbox" name="ch7Apt" />
-                                         <label for="ch7Apt">C#</label>
+                                        <input id="ch7Apt" runat="server" type="checkbox" name="ch7Apt" />
+                                         <label for="ch7Apt">Liderazgo</label>
                                         
                                     </td>
                                     <td class="auto-style5">
-                                         <input id="ch8Apt" type="checkbox" name="ch8Apt" />
-                                         <label for="ch8Apt">Ruby</label>
+                                         <input id="ch8Apt" runat="server" type="checkbox" name="ch8Apt" />
+                                         <label for="ch8Apt">Perseverancia</label>
                                         
                                     </td>
                                     <td>
-                                         <input id="ch9Apt" type="checkbox" name="ch9Apt" />
-                                         <label for="ch9Apt">PHP</label>
+                                         <input id="ch9Apt" runat="server" type="checkbox" name="ch9Apt" />
+                                         <label for="ch9Apt">Capacidad de mantenerse actualizado</label>
                                        
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style4">
-                                         <input id="ch10Apt" type="checkbox" name="ch10Apt" />
-                                         <label for="ch10Apt">HTML</label>
+                                         <input id="ch10Apt" runat="server" type="checkbox" name="ch10Apt" />
+                                         <label for="ch10Apt">Afán de superación</label>
                                        
                                     </td>
                                     <td class="auto-style5">
-                                         <input id="ch11Apt" type="checkbox" name="ch11Apt" />
-                                         <label for="ch11Apt">CSS</label>
+                                         <input id="ch11Apt" runat="server" type="checkbox" name="ch11Apt" />
+                                         <label for="ch11Apt">Responsable</label>
                                         
                                     </td>
                                     <td>
-                                         <input id="ch12Apt" type="checkbox" name="ch12Apt" />
-                                         <label for="ch12Apt">JavaScript</label>
-                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style4">
-                                          <input id="ch13Apt" type="checkbox" name="ch13Apt" />
-                                         <label for="ch13Apt">Ensamblador</label>
-                                       
-                                    </td>
-                                    <td class="auto-style5">
-                                        <input id="ch14Apt" type="checkbox" name="ch14Apt" />
-                                        <label for="ch14Apt">Fortran</label>
-                                       
-                                       
-                                    </td>
-                                    <td>
-                                         <input id="ch15Apt" type="checkbox" name="ch15Apt" />
-                                         <label for="ch15Apt">COBOL</label>
+                                         <input id="ch12Apt" runat="server" type="checkbox" name="ch12Apt" />
+                                         <label for="ch12Apt">Alta ética</label>
                                         
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style4">
-                                         <input id="ch16Apt" type="checkbox" name="ch16Apt" />
-                                        <label for="ch16Apt">NesC</label>
+                                          <input id="ch13Apt" runat="server" type="checkbox" name="ch13Apt" />
+                                         <label for="ch13Apt">Conducta emprendedora</label>
                                        
                                     </td>
                                     <td class="auto-style5">
-                                        <input id="ch17Apt" type="checkbox" name="ch17Apt" />
-                                        <label for="ch17Apt">Prolog</label>
+                                        <input id="ch14Apt" runat="server" type="checkbox" name="ch14Apt" />
+                                        <label for="ch14Apt">Innovador/a</label>
+                                       
                                        
                                     </td>
                                     <td>
-                                        <input id="ch18Apt" type="checkbox" name="ch18Apt" />
-                                        <label for="ch18Apt">UML</label>
+                                         <input id="ch15Apt" runat="server" type="checkbox" name="ch15Apt" />
+                                         <label for="ch15Apt">Autodidacta</label>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style4">
+                                         <input id="ch16Apt" runat="server" type="checkbox" name="ch16Apt" />
+                                        <label for="ch16Apt">Conciencia de la realidad social</label>
+                                       
+                                    </td>
+                                    <td class="auto-style5">
+                                        <input id="ch17Apt" runat="server" type="checkbox" name="ch17Apt" />
+                                        <label for="ch17Apt">Interés por la investigación</label>
+                                       
+                                    </td>
+                                    <td>
+                                        <input id="ch18Apt" runat="server" type="checkbox" name="ch18Apt" />
+                                        <label for="ch18Apt">Trabajar bajo presión</label>
                                         
                                     </td>
                                 </tr>
@@ -348,104 +357,104 @@
                               <table style="width: 93%;">
                                 <tr>
                                     <td class="auto-style4">
-                                          <input id="ch1Cur" type="checkbox" name="ch1Cur" />
-                                          <label for="ch1Cur">Visual Basic</label>
+                                          <input id="ch1Cur" runat="server" type="checkbox" name="ch1Cur" />
+                                          <label for="ch1Cur">Internet de las cosas</label>
                                     </td>
                                     <td class="auto-style5">
-                                          <input id="ch2Cur" type="checkbox" name="ch2Cur" />
-                                          <label for="ch2Cur">C</label>
+                                          <input id="ch2Cur" runat="server" type="checkbox" name="ch2Cur" />
+                                          <label for="ch2Cur">Sistemas embebidos</label>
                                   
                                     </td>
                                     <td>
-                                         <input id="ch3Cur" type="checkbox" name="ch3Cur" />
-                                         <label for="ch3Cur">C++</label>
+                                         <input id="ch3Cur" runat="server" type="checkbox" name="ch3Cur" />
+                                         <label for="ch3Cur">ERP</label>
                               
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style4">
-                                         <input id="ch4Cur" type="checkbox" name="ch4Cur" />
-                                         <label for="ch4Cur">Java</label>
+                                         <input id="ch4Cur" runat="server" type="checkbox" name="ch4Cur" />
+                                         <label for="ch4Cur">IHC</label>
                               
                                        
                                     </td>
                                     <td class="auto-style5">
-                                         <input id="ch5Cur" type="checkbox" name="ch5Cur" />
-                                         <label for="ch5Cur">Python</label>
+                                         <input id="ch5Cur" runat="server" type="checkbox" name="ch5Cur" />
+                                         <label for="ch5Cur">SQL Server</label>
                                         
                                     </td>
                                     <td>
-                                         <input id="ch6Cur" type="checkbox" name="ch6Cur" />
-                                         <label for="ch6Cur">Pascal</label>
+                                         <input id="ch6Cur" runat="server" type="checkbox" name="ch6Cur" />
+                                         <label for="ch6Cur">Word</label>
                                        
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style4">
-                                        <input id="ch7Cur" type="checkbox" name="ch7Cur" />
-                                         <label for="ch7Cur">C#</label>
+                                        <input id="ch7Cur" runat="server" type="checkbox" name="ch7Cur" />
+                                         <label for="ch7Cur">Excel</label>
                                         
                                     </td>
                                     <td class="auto-style5">
-                                         <input id="ch8Cur" type="checkbox" name="ch8Cur" />
-                                         <label for="ch8Cur">Ruby</label>
+                                         <input id="ch8Cur" runat="server" type="checkbox" name="ch8Cur" />
+                                         <label for="ch8Cur">Photoshop</label>
                                         
                                     </td>
                                     <td>
-                                         <input id="ch9Cur" type="checkbox" name="ch9Cur" />
-                                         <label for="ch9Cur">PHP</label>
+                                         <input id="ch9Cur" runat="server" type="checkbox" name="ch9Cur" />
+                                         <label for="ch9Cur">Google Docs</label>
                                        
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style4">
-                                         <input id="ch10Cur" type="checkbox" name="ch10Cur" />
-                                         <label for="ch10Cur">HTML</label>
+                                         <input id="ch10Cur" runat="server" type="checkbox" name="ch10Cur" />
+                                         <label for="ch10Cur">Windows 10</label>
                                        
                                     </td>
                                     <td class="auto-style5">
-                                         <input id="ch11Cur" type="checkbox" name="ch11Cur" />
-                                         <label for="ch11Cur">CSS</label>
+                                         <input id="ch11Cur" runat="server" type="checkbox" name="ch11Cur" />
+                                         <label for="ch11Cur">Microsoft Azure</label>
                                         
                                     </td>
                                     <td>
-                                         <input id="ch12Cur" type="checkbox" name="ch12Cur" />
-                                         <label for="ch12Cur">JavaScript</label>
-                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style4">
-                                          <input id="ch13Cur" type="checkbox" name="ch13Cur" />
-                                         <label for="ch13Cur">Ensamblador</label>
-                                       
-                                    </td>
-                                    <td class="auto-style5">
-                                        <input id="ch14Cur" type="checkbox" name="ch14Cur" />
-                                        <label for="ch14Cur">Fortran</label>
-                                       
-                                       
-                                    </td>
-                                    <td>
-                                         <input id="ch15Cur" type="checkbox" name="ch15Cur" />
-                                         <label for="ch15Cur">COBOL</label>
+                                         <input id="ch12Cur" runat="server" type="checkbox" name="ch12Cur" />
+                                         <label for="ch12Cur">MS Dynamics</label>
                                         
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style4">
-                                         <input id="ch16Cur" type="checkbox" name="ch16Cur" />
-                                        <label for="ch16Cur">NesC</label>
+                                          <input id="ch13Cur" runat="server" type="checkbox" name="ch13Cur" />
+                                         <label for="ch13Cur">Virtualización</label>
                                        
                                     </td>
                                     <td class="auto-style5">
-                                        <input id="ch17Cur" type="checkbox" name="ch17Cur" />
-                                        <label for="ch17Cur">Prolog</label>
+                                        <input id="ch14Cur" runat="server" type="checkbox" name="ch14Cur" />
+                                        <label for="ch14Cur">Windows Server</label>
+                                       
                                        
                                     </td>
                                     <td>
-                                        <input id="ch18Cur" type="checkbox" name="ch18Cur" />
-                                        <label for="ch18Cur">UML</label>
+                                         <input id="ch15Cur" runat="server" type="checkbox" name="ch15Cur" />
+                                         <label for="ch15Cur">Exchange Server</label>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style4">
+                                         <input id="ch16Cur" runat="server" type="checkbox" name="ch16Cur" />
+                                        <label for="ch16Cur">Cloud Computing</label>
+                                       
+                                    </td>
+                                    <td class="auto-style5">
+                                        <input id="ch17Cur" runat="server" type="checkbox" name="ch17Cur" />
+                                        <label for="ch17Cur">AngularJS</label>
+                                       
+                                    </td>
+                                    <td>
+                                        <input id="ch18Cur" runat="server" type="checkbox" name="ch18Cur" />
+                                        <label for="ch18Cur">Seguridad Informatica</label>
                                         
                                     </td>
                                 </tr>
@@ -483,7 +492,7 @@
                     </div>
                     <div class="ContSlider">
                          <h3>Dominio del chino</h3>
-                         <input id="Range1" type="range" runat="server" min="1" max="100" oninput="document.getElementById('lblRChino').textContent = this.value;"  />
+                         <input id="RangoChino" type="range" runat="server" min="1" max="100" oninput="document.getElementById('lblRChino').textContent = this.value;"  />
                         <asp:Label ID="lblRChino" runat="server" Text="50" ForeColor="#329040"></asp:Label>
                     </div>
                   
